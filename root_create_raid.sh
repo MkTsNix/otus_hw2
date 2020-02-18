@@ -36,4 +36,4 @@ for i in $(seq 1 5); do mount /dev/md0p$i /raid/part$i; done
 
 chmod -R 775 /raid/
 
-touch /home/vagrant/HW_is_ready!!!
+echo "----------->  VM with mounted RAID6 is ready for use"
