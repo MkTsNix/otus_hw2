@@ -38,4 +38,7 @@ for i in $(seq 1 5); do mount /dev/md0p$i /raid/part$i; done
 chown -R vagrant:vagrant /raid/
 chmod -R 775 /raid/
 
+# Add to mount points to fstab
+for i in $(seq 1 5); do echo "/dev/md0p$i /raid/part$i  ext4     defaults        0 0" >> /etc/fstab; done
+
 echo "----------->  VM with mounted RAID6 is ready for use"
